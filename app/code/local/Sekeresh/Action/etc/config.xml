@@ -2,8 +2,51 @@
 <config>
     <modules>
         <Sekeresh_Action>
-            <active>true</active>
-            <codePool>local</codePool>
+            <version>0.1.0</version>
         </Sekeresh_Action>
     </modules>
+    <frontend>
+        <routers>
+            <sekeresh_action>
+                <use>standard</use>
+                <args>
+                    <module>Sekeresh_Action</module>
+                    <frontName>sekeresh_action</frontName>
+                </args>
+            </sekeresh_action>
+        </routers>
+    </frontend>
+    <global>
+        <models>
+            <sekeresh_action>
+                <class>Sekeresh_Action_Model</class>
+                <resourceModel>sekeresh_action_resource</resourceModel>
+            </sekeresh_action>
+            <sekeresh_action_resource>
+                <class>Sekeresh_Action_Model_Resource</class>
+                <entities>
+                    <action>
+                        <table>sekeresh_action</table>
+                    </action>
+                </entities>
+            </sekeresh_action_resource>
+        </models>
+        <resources>
+            <sekeresh_action>
+                <setup>
+                    <module>Sekeresh_Action</module>
+                </setup>
+            </sekeresh_action>
+        </resources>
+        <events>
+            <page_block_html_topmenu_gethtml_before>
+                <observers>
+                   <action>
+                        <class>sekeresh_action/observer</class>
+                       <method>addLinkToTopmenu</method>
+                   </action>
+                </observers>
+            </page_block_html_topmenu_gethtml_before>
+        </events>
+    </global>
 </config>
