@@ -24,8 +24,8 @@ $table = $installer->getConnection()->newTable($tableNameActionProduct)
         'primary' => true,
         'unsigned' => true,
     ), 'Product ID')
-    ->addForeignKey('FK_ID_ACTION','action_id',$actionTable, 'action_id', Varien_Db_Ddl_Table::ACTION_CASCADE, Varien_Db_Ddl_Table::ACTION_CASCADE)
-    ->addForeignKey('FK_ID_PRODUCT','product_id',$ProductTable, 'entity_id', Varien_Db_Ddl_Table::ACTION_CASCADE, Varien_Db_Ddl_Table::ACTION_CASCADE);
+    ->addForeignKey('FK_ACTION_PRODUCT_ACTION','action_id',$actionTable, 'action_id', Varien_Db_Ddl_Table::ACTION_CASCADE, Varien_Db_Ddl_Table::ACTION_CASCADE)
+    ->addForeignKey('FK_ACTION_PRODUCT_PRODUCT','product_id',$ProductTable, 'entity_id', Varien_Db_Ddl_Table::ACTION_CASCADE, Varien_Db_Ddl_Table::ACTION_CASCADE);
 
 $installer->getConnection()->createTable($table);
 
