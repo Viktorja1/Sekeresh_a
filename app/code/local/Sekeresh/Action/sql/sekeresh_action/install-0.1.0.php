@@ -17,9 +17,9 @@ $table = $installer->getConnection()->newTable($tableName)
     ->addColumn('description', Varien_Db_Ddl_Table::TYPE_TEXT, array('nullable' => false), 'description')
     ->addColumn('short_description', Varien_Db_Ddl_Table::TYPE_VARCHAR, 255, array('nullable' => false), 'short_description')
     ->addColumn('image', Varien_Db_Ddl_Table::TYPE_VARCHAR, 255, array('nullable' => false), 'image')
-    ->addColumn('create_datetime', Varien_Db_Ddl_Table::TYPE_DATETIME, array('nullable' => false), 'create_datetime')
-    ->addColumn('start_datetime', Varien_Db_Ddl_Table::TYPE_DATETIME, array('nullable' => false), 'start_datetime')
-    ->addColumn('end_datetime', Varien_Db_Ddl_Table::TYPE_DATETIME, array('nullable' => false), 'end_datetime');
+    ->addColumn('create_datetime', Varien_Db_Ddl_Table::TYPE_TIMESTAMP, null, array('nullable' => false), 'create_datetime')
+    ->addColumn('start_datetime', Varien_Db_Ddl_Table::TYPE_TIMESTAMP, null, array('nullable' => false), 'start_datetime')
+    ->addColumn('end_datetime', Varien_Db_Ddl_Table::TYPE_TIMESTAMP, null, array('nullable' => false), 'end_datetime');
 
 
     $installer->getConnection()->createTable($table);

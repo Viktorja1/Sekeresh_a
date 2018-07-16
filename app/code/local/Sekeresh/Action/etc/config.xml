@@ -2,7 +2,7 @@
 <config>
     <modules>
         <Sekeresh_Action>
-            <version>0.1.0</version>
+            <version>0.1.2</version>
         </Sekeresh_Action>
     </modules>
     <frontend>
@@ -15,8 +15,20 @@
                 </args>
             </sekeresh_action>
         </routers>
+        <layout>
+            <updates>
+                <sekeresh_action>
+                    <file>sekeresh/action.xml</file>
+                </sekeresh_action>
+            </updates>
+        </layout>
     </frontend>
     <global>
+        <blocks>
+            <sekeresh_action>
+                <class>Sekeresh_Action_Block</class>
+            </sekeresh_action>
+        </blocks>
         <models>
             <sekeresh_action>
                 <class>Sekeresh_Action_Model</class>
@@ -28,6 +40,9 @@
                     <action>
                         <table>sekeresh_action</table>
                     </action>
+                    <action_product>
+                        <table>sekeresh_action_product</table>
+                    </action_product>
                 </entities>
             </sekeresh_action_resource>
         </models>
