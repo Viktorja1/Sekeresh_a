@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<layout version="0.1.0">
+    <sekeresh_action_index_index>
+        <update handle="sekeresh_action_index_actions"/>
+    </sekeresh_action_index_index>
+    <sekeresh_action_index_actions>
+        <reference name="root">
+            <action method="setTemplate">
+                <template>page/2columns-right.phtml</template>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="sekeresh_action/actions" name="sekeresh_action.actions" template="sekeresh/action.pthml"/>
+        </reference>
+    </sekeresh_action_index_actions>
+</layout>
