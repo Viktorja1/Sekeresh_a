@@ -5,4 +5,8 @@ class Sekeresh_Action_IndexController extends Mage_Core_Controller_Front_Action
         $this->loadLayout();
         $this->renderLayout();
     }
+    public function actionsAction(){
+        $this->loadLayout();
+        $this->renderLayout();
+    }
 }

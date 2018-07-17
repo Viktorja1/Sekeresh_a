@@ -9,7 +9,7 @@ class Sekeresh_Action_Model_Observer
         $linkNode = new Varien_Data_Tree_Node(array(
             'name' => 'Sekeresh Акції',
             'id' => 'sekeresh_action',
-            'url' => Mage::getUrl('sekeresh_action/')
+            'url' => Mage::getUrl('sekeresh_action/index/actions')
         ), 'id', $tree, $menu);
 
         $menu->addChild($linkNode);
