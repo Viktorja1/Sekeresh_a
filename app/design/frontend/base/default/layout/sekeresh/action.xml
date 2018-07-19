@@ -10,7 +10,7 @@
             </action>
         </reference>
         <reference name="content">
-            <block type="sekeresh_action/actions" name="sekeresh_action.actions" template="sekeresh/action.pthml"/>
+            <block type="sekeresh_action/actions" name="sekeresh_action.actions" template="sekeresh/action.phtml"/>
         </reference>
     </sekeresh_action_index_actions>
 </layout>
