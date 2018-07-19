@@ -64,4 +64,25 @@
             </page_block_html_topmenu_gethtml_before>
         </events>
     </global>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <sekeresh_action before="Mage_Adminhtml">Sekeresh_Action_Adminhtml
+                        </sekeresh_action>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <adminhtml>
+        <layout>
+            <updates>
+                <sekeresh_action>
+                    <file>sekeresh/action.xml</file>
+                </sekeresh_action>
+            </updates>
+        </layout>
+    </adminhtml>
 </config>

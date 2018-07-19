@@ -1,5 +1,5 @@
 <?php
-class Sekeresh_Action_Block_Adminhtml_Action_Grid extends Mage_Core_Block_Widget_Grid
+class Sekeresh_Action_Block_Adminhtml_Action_Grid extends Mage_Adminhtml_Block_Widget_Grid
 {
     protected function _prepareCollection()
     {
@@ -18,10 +18,56 @@ class Sekeresh_Action_Block_Adminhtml_Action_Grid extends Mage_Core_Block_Widget
             'width'     => '10'
         ));
 
-        $this->addColumn('product_id', array(
-            'header'    => Mage::helper('sekeresh_action')->__('Link'),
+        $this->addColumn('is_active', array(
+            'header'    => Mage::helper('sekeresh_action')->__('Is_active'),
             'align'     => 'left',
-            'index'     => 'link'
+            'index'     => 'is_active',
+            'width'     => '10'
+        ));
+
+        $this->addColumn('name', array(
+            'header'    => Mage::helper('sekeresh_action')->__('Name'),
+            'align'     => 'left',
+            'index'     => 'Name'
+        ));
+
+        $this->addColumn('description', array(
+            'header'    => Mage::helper('sekeresh_action')->__('Description'),
+            'align'     => 'left',
+            'index'     => 'description'
+        ));
+        $this->addColumn('short_description', array(
+            'header'    => Mage::helper('sekeresh_action')->__('Short_description'),
+            'align'     => 'left',
+            'index'     => 'short_description'
+        ));
+
+        $this->addColumn('image', array(
+            'header'    => Mage::helper('sekeresh_action')->__('Image'),
+            'align'     => 'left',
+            'index'     => 'image'
+        ));
+
+        $this->addColumn('create_datetime', array(
+            'header'    => Mage::helper('sekeresh_action')->__('Create_datetime'),
+            'align'     => 'left',
+            'index'     => 'create_datetime'
+        ));
+        $this->addColumn('start_datetime', array(
+            'header'    => Mage::helper('sekeresh_action')->__('start_datetime'),
+            'align'     => 'left',
+            'index'     => 'start_datetime'
+        ));
+
+        $this->addColumn('end_datetime', array(
+            'header'    => Mage::helper('sekeresh_action')->__('End_datetime'),
+            'align'     => 'left',
+            'index'     => 'end_datetime'
+        ));
+        $this->addColumn('status', array(
+            'header'    => Mage::helper('sekeresh_action')->__('Status'),
+            'align'     => 'left',
+            'index'     => 'status'
         ));
 
         // TODO

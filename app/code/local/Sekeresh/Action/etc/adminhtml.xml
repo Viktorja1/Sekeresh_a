@@ -2,7 +2,7 @@
 <config>
     <menu>
         <sekeresh_action module="sekeresh_action">
-            <title>action</title>
+            <title>Sekeresh Акції</title>
             <sort_order>99</sort_order>
             <action>adminhtml/action</action>
         </sekeresh_action>

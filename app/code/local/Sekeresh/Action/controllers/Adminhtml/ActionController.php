@@ -15,7 +15,7 @@ class Sekeresh_Action_Adminhtml_ActionController extends Mage_Adminhtml_Controll
     public function editAction()
     {
         $id = $this->getRequest()->getParam('id');
-        $model = Mage::getModel('sekeresh/action')->load($id);
+        $model = Mage::getModel('sekeresh_action/action')->load($id);
 
         Mage::register('sekeresh_action', $model);
 
