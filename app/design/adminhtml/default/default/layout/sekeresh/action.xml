@@ -5,9 +5,7 @@
             <block type="sekeresh_action/adminhtml_action" name="action.grid"/>
         </reference>
     </adminhtml_action_index>
-    <adminhtml_action_edit>
-        <reference name="content">
-            <block type="sekeresh_action/adminhtml_action_edit" name="action.edit"></block>
-        </reference>
-    </adminhtml_action_edit>
+    <adminhtml_sekeresh_action_new>
+        <update handle="adminhtml_action_edit"/>
+    </adminhtml_sekeresh_action_new>
 </layout>

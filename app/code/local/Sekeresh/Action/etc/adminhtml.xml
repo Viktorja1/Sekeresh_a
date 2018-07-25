@@ -1,10 +1,48 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <config>
     <menu>
-        <sekeresh_action module="sekeresh_action">
-            <title>Sekeresh Акції</title>
+        <sekeresh_action module="adminhtml">
+            <title>Sekeresh</title>
             <sort_order>99</sort_order>
-            <action>adminhtml/action</action>
+                <children>
+                    <showaction>
+                        <title>Акції</title>
+                        <action>adminhtml/action/index</action>
+                        <sort_order>10</sort_order>
+                    </showaction>
+                </children>
+            <!--<action>adminhtml/sekeresh_action</action>-->
         </sekeresh_action>
     </menu>
+    <acl>
+        <resources>
+            <all>
+                <title>Allow Everything</title>
+            </all>
+            <admin>
+                <children>
+                    <system>
+                        <config>
+                            <children>
+                               <action module="adminhtml">
+                                   <title>Sekeresh</title>
+                                   <sort_order>71</sort_order>
+                               </action>
+                            </children>
+                        </config>
+                    </system>
+                    <sekeresh_action module="adminhtml">
+                        <title>Sekeresh</title>
+                        <sort_order>71</sort_order>
+                        <children>
+                            <sekeresh_action module="adminhtml">
+                                <title>Акції</title>
+                                <sort_order>0</sort_order>
+                            </sekeresh_action>
+                        </children>
+                    </sekeresh_action>
+                </children>
+            </admin>
+        </resources>
+    </acl>
 </config>

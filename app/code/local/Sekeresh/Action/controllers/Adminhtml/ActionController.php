@@ -1,13 +1,33 @@
 <?php
 class Sekeresh_Action_Adminhtml_ActionController extends Mage_Adminhtml_Controller_Action
 {
-    public function indexAction()
-    {
-        $this->loadLayout();
-        $this->renderLayout();
+    public function indexAction() {
+    die('admin');
+}
+   /* protected function _initAction(){         $this->loadLayout()
+        ->_setActiveMenu('sekeresh_action/action')
+        ->_addBreadcrumb(
+            Mage::helper('adminhtml')->__('Items Manager'),
+            Mage::helper('adminhtml')->__('Item Manager')
+        );
+    return $this;
     }
 
-    public function newAction()
+    public function testAction(){
+        $block = $this->getLayout()-> createBlock('adminhtml/template')
+            -> setTemplate('sekeresh_action/test/rendertesttemplate.phtml');
+        echo $block->toHtml();
+    }
+    protected function _isAllowed()     {
+        return Mage::getSingleton('admin/session')->_isAllowed('sekeresh_action');     }
+
+   /* public function indexAction(){
+        $this->loadLayout();
+        $this->renderLayout();
+    }*/
+
+
+/*    public function newAction()
     {
         $this->_forward('edit');
     }
@@ -55,9 +75,9 @@ class Sekeresh_Action_Adminhtml_ActionController extends Mage_Adminhtml_Controll
         }
 
         if (!$success || $backToEdit) {
-            $this->_redirect('*/*/edit', array('id' => $model->getId()));
+            $this->_redirect('  edit', array('id' => $model->getId()));
         } else {
-            $this->_redirect('*/*/index');
+     /*   $this->_redirect(' index');
         }
     }
 
@@ -67,7 +87,52 @@ class Sekeresh_Action_Adminhtml_ActionController extends Mage_Adminhtml_Controll
 
         // TODO
 
-        $this->_redirect('*/*/index');
+        $this->_redirect('   index');
     }
+
+    public function massDeleteAction() {
+
+        $ids = $this->getRequest()->getParam('ids', null);
+        // TODO
+
+        $this->_redirect(' ');
+    }
+
+    public function categorytabAction() {
+        $id = $this->getRequest()->getParam('id');
+
+        $model = null;
+        if ($id) {
+            $model = Mage::getModel('sekeresh_action/action')->load($id);
+        } else {
+            $model = Mage::getModel('sekeresh_action/action');
+        }
+
+        Mage::register('tsg_slider', $model);
+
+        $this->loadLayout();
+        $this->renderLayout();
+    }
+
+    public function categorygridAction() {
+        $id = $this->getRequest()->getParam('id');
+
+        $model = null;
+        if ($id) {
+            $model = Mage::getModel('sekeresh_action/action')->load($id);
+        } else {
+            $model = Mage::getModel('sekeresh_action/action');
+        }
+
+        Mage::register('sekeresh_action', $model);
+
+        $this->loadLayout();
+        $this->renderLayout();
+    }*/
+
+  /*  protected function _isAllowed()
+    {
+        return Mage::getSingleton('admin/session')->isAllowed('admin/sekeresh_action');
+    }*/
 
 }
