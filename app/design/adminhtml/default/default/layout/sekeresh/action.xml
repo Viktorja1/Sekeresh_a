@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <layout>
-    <adminhtml_action_index>
+   <!-- <adminhtml_action_index>
         <reference name="content">
             <block type="sekeresh_action/adminhtml_action" name="action.grid"/>
         </reference>
     </adminhtml_action_index>
     <adminhtml_sekeresh_action_new>
         <update handle="adminhtml_action_edit"/>
-    </adminhtml_sekeresh_action_new>
+    </adminhtml_sekeresh_action_new>-->
 </layout>

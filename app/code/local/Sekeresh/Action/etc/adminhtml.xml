@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <config>
     <menu>
-        <sekeresh_action module="adminhtml">
+        <sekeresh_action module="action">
             <title>Sekeresh</title>
             <sort_order>99</sort_order>
                 <children>
-                    <showaction>
-                        <title>Акції</title>
+                    <action>
+                        <title>Action</title>
                         <action>adminhtml/action/index</action>
                         <sort_order>10</sort_order>
-                    </showaction>
+                    </action>
                 </children>
             <!--<action>adminhtml/sekeresh_action</action>-->
         </sekeresh_action>
@@ -24,19 +24,19 @@
                     <system>
                         <config>
                             <children>
-                               <action module="adminhtml">
+                               <sekeresh module="action">
                                    <title>Sekeresh</title>
                                    <sort_order>71</sort_order>
-                               </action>
+                               </sekeresh>
                             </children>
                         </config>
                     </system>
-                    <sekeresh_action module="adminhtml">
+                    <sekeresh_action module="action">
                         <title>Sekeresh</title>
                         <sort_order>71</sort_order>
                         <children>
-                            <sekeresh_action module="adminhtml">
-                                <title>Акції</title>
+                            <sekeresh_action module="action">
+                                <title>Action</title>
                                 <sort_order>0</sort_order>
                             </sekeresh_action>
                         </children>

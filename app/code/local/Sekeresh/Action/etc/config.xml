@@ -74,13 +74,16 @@
             <adminhtml>
                 <args>
                     <modules>
-                        <sekeresh_action_adminhtml before="Mage_Adminhtml">Sekeresh_Action_Adminhtml
-                        </sekeresh_action_adminhtml>
+                        <sekeresh_action before="Mage_Adminhtml">Sekeresh_Action_Adminhtml
+                        </sekeresh_action>
                     </modules>
                 </args>
             </adminhtml>
         </routers>
     </admin>
+    <default>
+
+    </default>
     <adminhtml>
         <layout>
             <updates>
